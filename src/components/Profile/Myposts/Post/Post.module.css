@@ -1,0 +1,30 @@
+.post {
+  display: block;
+  background-color: rgb(90, 64, 148);
+  margin: 10px 10px 10px 10px;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  color: #fff;
+}
+
+.post img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  border-radius: 30px;
+}
+.post span {
+  position: absolute;
+  right: 30px; 
+}
+
+.post button {
+  position: absolute;
+  right: 100px; 
+}
+
+.items {
+}
