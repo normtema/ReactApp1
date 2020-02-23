@@ -1,10 +1,25 @@
 .nav {
   grid-area: n;
   background-color: rgb(105, 100, 25);
+  padding-left: 15px;
+  padding-top: 10px;
 }
 
 .nav__item {
   color: #fff;
-  padding-left: 15px;
-  
+  padding-top: 5px;
+}
+
+.nav__item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__item a.active {
+  text-decoration: none;
+  color: #fff;
+  border: 0 solid rgb(98, 194, 194);
+  border-radius: 15px;
+  background-color: rgb(87, 105, 187);
+  padding: 2px 4px 4px 2px;
 }

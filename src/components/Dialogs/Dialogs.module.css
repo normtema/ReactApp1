@@ -1,0 +1,30 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    color: blue;
+
+}
+
+.dialogs__people {
+    padding: 10px;
+    color: #fff;
+}
+
+.dialogs__messages {
+    padding: 10px;
+}
+
+.dialog {
+    display: block;
+    background-color: rgb(90, 64, 148);
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    text-align: center;
+    
+}
+.dialog div {
+    color: #fff;
+}

@@ -60,7 +60,7 @@ ReactDOM.render(<Test />, document.querySelector('.test'));
 let btn = document.querySelector('.btn');
 let tog = () => {
     ReactDOM.render(
-        <Toggler />,
+        <Toggler />, 
         document.querySelector('.toggler')
     );
 }
