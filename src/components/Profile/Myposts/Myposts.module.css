@@ -1,1 +1,13 @@
 
+.profie__posts {
+    display: block;
+
+}
+
+.profie__posts textarea {
+    width: 400px;
+    height: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+}

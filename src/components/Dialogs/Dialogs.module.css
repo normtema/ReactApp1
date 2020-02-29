@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
     color: blue;
+    
 
 }
 
@@ -27,4 +28,16 @@
 }
 .dialog div {
     color: #fff;
+}
+
+.messages {
+    background-color: rgba(142, 124, 147, 1);
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+
 }
