@@ -1,26 +1,26 @@
 import * as serviceWorker from './serviceWorker';
-import state from './redux/state';
+import store from './redux/state';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import "styled-components/macro";
 
-import {addPost, updateNewPostText, subscribe} from './redux/state';
+
 
 
 let reRenderTree = (state) => {
 
     ReactDOM.render(
-        <App state={state} addPost={addPost} updateNewPostText={updateNewPostText}/>,
+        <App state={store.getState()} dispatch={store.dispatch.bind(store)} />,
     document.querySelector('.app')
     );
 
 }
 
-reRenderTree(state);
+reRenderTree(store.getState());
 
-subscribe(reRenderTree);
+store.subscribe(reRenderTree);
 
 serviceWorker.unregister();
 
