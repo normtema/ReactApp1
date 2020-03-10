@@ -1,10 +1,11 @@
 import * as serviceWorker from './serviceWorker';
-import store from './redux/state';
+import store from './redux/store';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import "styled-components/macro";
+import { BrowserRouter } from 'react-router-dom';
 
 
 
@@ -12,7 +13,9 @@ import "styled-components/macro";
 let reRenderTree = (state) => {
 
     ReactDOM.render(
-        <App state={store.getState()} dispatch={store.dispatch.bind(store)} />,
+        <BrowserRouter>
+        <App state={store.getState()} dispatch={store.dispatch.bind(store)} /> 
+        </BrowserRouter> ,
     document.querySelector('.app')
     );
 

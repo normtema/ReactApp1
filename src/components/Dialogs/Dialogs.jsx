@@ -3,7 +3,7 @@ import classes from './Dialogs.module.css';
 
 import DialogItem from './DialogItem/DialogItem';
 import MessageItem from './MessageItem/MessageItem';
-import {addMessageActionCreator, updateNewMessageTextActionCreator} from './../../redux/state';
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from './../../redux/people-reducer';
 
 const Dialogs = (props) => {
 
@@ -37,7 +37,7 @@ const Dialogs = (props) => {
             <div className={classes.dialogs__messages}>
                 <div>
                     <div>
-                        <textarea ref = {newMessageEl} onChange={onMessageChange} value={props.newPostText} />
+                        <textarea ref = {newMessageEl} onChange={onMessageChange} value={props.newMessageText} />
                     </div>
                     <div>
                         <button onClick={addMessage} >Add Message</button>
