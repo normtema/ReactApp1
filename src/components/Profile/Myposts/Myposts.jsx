@@ -1,24 +1,20 @@
 import React from 'react';
 import classes from'./Myposts.module.css';
 import Post from './Post/Post';
-import {addPostActionCreator, updateNewPostTextActionCreator} from './../../../redux/post-reducer';
 
 const Myposts = (props) => {
 
-  let PostArr = props.PostData.map( el => <Post text={el.text} likeAmount={el.likeAmount}/>  );
-
+  let PostArr = props.post.PostData.map( el => <Post text={el.text} likeAmount={el.likeAmount}/>  );
 
   let newPostEl = React.createRef();
 
-
-  let addPost = () => {
-    props.dispatch(addPostActionCreator());
+  let onaddPost = () => {
+    props.addPost();
   };
 
   let onPostChange = () => {
     let text=newPostEl.current.value;
-    let action = updateNewPostTextActionCreator(text);
-    props.dispatch(action);
+    props.updateNewPostText(text);
   };
 
   return (
@@ -27,10 +23,10 @@ const Myposts = (props) => {
         <h3>My posts</h3>
         <div>
           <div>
-            <textarea ref = {newPostEl} onChange={onPostChange} value={props.newPostText} />
+            <textarea ref = {newPostEl} onChange={onPostChange} value={props.post.newPostText} />
           </div>
           <div>
-            <button onClick={addPost} >Add post</button>
+            <button onClick={onaddPost} >Add post</button>
           </div>
         </div>
 
