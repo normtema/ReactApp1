@@ -10,7 +10,7 @@ const Navbar = () => {
         <nav className={classes.nav}>
           <div className={classes.nav__item}> <NavLink to='/Profile' activeClassName={classes.active}>Profile</NavLink></div>
           <div className={classes.nav__item}> <NavLink to='/Dialogs' activeClassName={classes.active}>Messages</NavLink></div>
-          <div className={classes.nav__item}> <a href='#' >News</a></div>
+          <div className={classes.nav__item}> <NavLink to='/Users' activeClassName={classes.active}>Users</NavLink></div>
           <div className={classes.nav__item}> <a>Music</a></div>
           <div className={classes.nav__item}> <a>Settings</a></div>
       </nav>

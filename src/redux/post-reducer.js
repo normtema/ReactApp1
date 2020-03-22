@@ -20,17 +20,18 @@ const postReducer = (state = initialState, a) => {
             text : state.newPostText,
             likeAmount: 33
         };
-        let stateCopy = {...state};
-        stateCopy.PostData = [...state.PostData];
-        stateCopy.PostData.push(p);
-        stateCopy.newPostText = '';
-        return stateCopy;
+        return {
+          ...state,
+          PostData: [...state.PostData, p],
+          newPostText: '' 
+      };
     }
 
     case UPDATE_NEW_POST_TEXT: {
-        let stateCopy = {...state};
-        stateCopy.newPostText = a.newText;
-        return stateCopy;
+        return {
+          ...state,
+          newPostText: a.newText
+        };
     }
     default:
     return state;

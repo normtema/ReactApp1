@@ -21,25 +21,25 @@ let initialState = {
 const peopleReducer = (state = initialState, a) => {
   switch (a.type) {
     case ADD_MESSAGE: {
-        let p = {
-            id : state.MessageData.length + 1,
-            message : state.newMessageText
-        };
-        let stateCopy = {...state};
-        stateCopy.MessageData = [...state.MessageData];
-        stateCopy.MessageData.push(p);
-        stateCopy.newMessageText = '';  
-        return stateCopy;
+      let p = {
+        id: state.MessageData.length + 1,
+        message: state.newMessageText
+      };
+      return {
+        ...state,
+        MessageData:[...state.MessageData, p],
+        newMessageText: ''
+      };
     }
-
-     case UPDATE_NEW_MESSAGE_TEXT: {
-        let stateCopy = {...state};
-        stateCopy.newMessageText = {...state.newMessageText};
-        stateCopy.newMessageText = a.newText;
-        return stateCopy;
-    }
-    default: 
-    return state;
+    
+    case UPDATE_NEW_MESSAGE_TEXT: {
+      return {
+        ...state,
+        newMessageText: a.newText
+      };
+    }   
+    default:
+      return state;
   }
 };
 
